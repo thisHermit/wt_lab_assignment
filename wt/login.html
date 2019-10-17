@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="form_validation.js" charset="utf-8"></script>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="col-lg-7">
+      <a href="#" title="www.nitandhra.ac.in">
+        <img src="logo.png" class="img-responsive logo">
+      </a>
+      <center>
+        <h3 style="font-family: Nirmala UI; font-size: 1vw; padding-top: 6px;"><a class="a2" href="/">राष्ट्रीय प्रौद्योगिकी संस्थान आंध्र प्रदेश</a></h3>
+        <h3 style="font-size:1vw;"><a class="a1" href="/" title="www.nitandhra.ac.in">NATIONAL INSTITUTE OF TECHNOLOGY ANDHRA PRADESH</a></h3>
+        <span>( An autonomous Institute under the aegis of Ministry of HRD, Govt. of India )</span>
+      </center>
+    </div>
+    <img class = "cse_logo" src="cse.jpg" alt="">
+    <br>
+    <div class="topnav">
+      <a href="home.html">Home</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="infra.html">Infrastructure</a>
+      <a href="course.html">Course</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <form action="userHome.html" method="post">
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <label>
+          <input type="radio" name="Student" value="Student">Student</input>
+          <input type="radio" name="Student" value="Teacher">Teacher</input>
+        </label>
+        <button type="submit" onclick="validation()">Login</button>
+      </div>
+
+      <div class="container">
+        <span>New User? Click <a href="register.html">here</a></span>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <span class="psw">Forgot <a href="forgotPassword.html">password?</a></span>
+      </div>
+    </form>
+  </body>
+</html>
