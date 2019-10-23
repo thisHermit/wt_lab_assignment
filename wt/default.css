@@ -48,10 +48,35 @@ ul.nav {
   color: black;
 }
 
-.selction {
+.selection {
   float: left;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+.container {
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container::before {
+  /* background-image: url('path/to/image.jpg'); Actual image for this demo is a data-uri, see below */
+  /* Prefix free isn't picking up this one */
+  background-image: url("joni_baba.jpg");
+  -webkit-filter: url('#blur');
+  filter: url('#blur');
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+body {
+  background-image: url("joni_baba.jpg");
+  background-position: center;
+  max-width: 100%;
+  max-height: 100%;
 }

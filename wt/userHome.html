@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="login.css">
     <title>User Home Page</title>
   </head>
   <body>
@@ -28,36 +29,63 @@
     </div>
 
     <div class="topnav">
-      <select class = "selction">
+      <select class = "selection">
         <option value="Materials">Materials</option>
         <option value="Materials">Materials 1</option>
         <option value="Materials">Materials 2</option>
         <option value="Materials">Materials 3</option>
       </select>
-      <select class = "selction">
+      <select class = "selection">
         <option value="Journal">Journal</option>
         <option value="Journal 1">Journal 1</option>
         <option value="Journal 2">Journal 2</option>
         <option value="Journal 3">Journal 3</option>
       </select>
-      <select class = "selction">
+      <select class = "selection">
         <option value="Papers">Papers</option>
         <option value="Papers 1">Papers 1</option>
         <option value="Papers 2">Papers 2</option>
         <option value="Papers 3">Papers 3</option>
       </select>
-      <select class = "selction">
+      <select class = "selection">
         <option value="Course Files">Course Files</option>
         <option value="Course Files 1">Course Files 1</option>
         <option value="Course Files 2">Course Files 2</option>
         <option value="Course Files 3">Course Files 3</option>
       </select>
-      <select class = "selction">
+      <select class = "selection">
         <option value="Syllabus">Syllabus</option>
         <option value="Syllabus 1">Syllabus 1</option>
         <option value="Syllabus 2">Syllabus 2</option>
         <option value="Syllabus 3">Syllabus 3</option>
       </select>
     </div>
+
+    <div class="container">
+      <form class="" action="" method="post">
+        <div class="container">
+          <label for="pic"><b>Upload File</b></label>
+          <input type="file" name="pic" required/>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function listQ(e){
+        console.log(e);
+        console.log(e.selectedIndex);
+        // TODO: add checks here
+        document.getElementById('download').click();
+      }
+
+
+      var listOfSelects = document.getElementsByClassName("selection");
+      for (var i = 0; i < listOfSelects.length; i++) {
+        listOfSelects[i].addEventListener("change", listQ);
+      }
+
+    </script>
+    <a href="a.pdf" download id="download" hidden></a>
   </body>
 </html>
